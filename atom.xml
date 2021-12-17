@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-12T07:05:01.804Z</updated>
+  <updated>2021-12-17T22:39:42.894Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,41 +17,80 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JDK JRE JVM</title>
-    <link href="http://example.com/2021/12/12/JDK-JRE-JVM/"/>
-    <id>http://example.com/2021/12/12/JDK-JRE-JVM/</id>
-    <published>2021-12-11T20:37:21.000Z</published>
-    <updated>2021-12-12T07:05:01.804Z</updated>
+    <title>JavaSE-01：注释、标识符、关键字</title>
+    <link href="http://example.com/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A%E3%80%81%E6%A0%87%E8%AF%86%E7%AC%A6%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    <id>http://example.com/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A%E3%80%81%E6%A0%87%E8%AF%86%E7%AC%A6%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97/</id>
+    <published>2021-12-13T01:38:22.000Z</published>
+    <updated>2021-12-17T22:39:42.894Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;#JDK&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Java</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;注释&quot;&gt;&lt;a href=&quot;#注释&quot; class=&quot;headerlink&quot; title=&quot;注释&quot;&gt;&lt;/a&gt;注释&lt;/h1&gt;&lt;h3 id=&quot;什么是注释&quot;&gt;&lt;a href=&quot;#什么是注释&quot; class=&quot;headerlink&quot; title=&quot;什么是注释&quot;&gt;&lt;/a&gt;什么是注释&lt;/h3&gt;&lt;p&gt;注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。&lt;/p&gt;
+&lt;h3 id=&quot;注释的作用&quot;&gt;&lt;a href=&quot;#注释的作用&quot; class=&quot;headerlink&quot; title=&quot;注释的作用&quot;&gt;&lt;/a&gt;注释的作用&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;有助于他人阅读代码快速理解&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;有助于提高开发效率&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;有助于保持代码一致性&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;帮助修补程序或快速修复&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;有助于加快开发过程&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;有助于提高协作效率&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Java注释有三种&quot;&gt;&lt;a href=&quot;#Java注释有三种&quot; class=&quot;headerlink&quot; title=&quot;Java注释有三种&quot;&gt;&lt;/a&gt;Java注释有三种&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;单行注释&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;多行注释&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;文档注释&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;</summary>
     
     
     
-    <category term="Java学习" scheme="http://example.com/categories/Java/"/>
+    <category term="Java学习" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="基础语法" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
+    <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    
   </entry>
   
   <entry>
-    <title>陈镇溪的第一篇博客文章</title>
-    <link href="http://example.com/2021/12/08/%E9%99%88%E9%95%87%E6%BA%AA%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/2021/12/08/%E9%99%88%E9%95%87%E6%BA%AA%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
-    <published>2021-12-07T20:41:55.000Z</published>
-    <updated>2021-12-07T20:41:55.531Z</updated>
+    <title>Java是什么</title>
+    <link href="http://example.com/2021/12/12/Java%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    <id>http://example.com/2021/12/12/Java%E6%98%AF%E4%BB%80%E4%B9%88/</id>
+    <published>2021-12-12T03:39:22.000Z</published>
+    <updated>2021-12-17T22:40:20.739Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Java概述&quot;&gt;&lt;a href=&quot;#Java概述&quot; class=&quot;headerlink&quot; title=&quot;Java概述&quot;&gt;&lt;/a&gt;Java概述&lt;/h1&gt;&lt;h3 id=&quot;什么是Java？&quot;&gt;&lt;a href=&quot;#什么是Java？&quot; class=&quot;headerlink&quot; title=&quot;什么是Java？&quot;&gt;&lt;/a&gt;什么是Java？&lt;/h3&gt;&lt;p&gt;Java是Sun Microsystems于1995年首次发布的一种&lt;code&gt;编程语言&lt;/code&gt;和&lt;code&gt;计算平台&lt;/code&gt;。编程语言还比较好理解，那么什么是&lt;code&gt;计算平台&lt;/code&gt;呢？&lt;/p&gt;
+&lt;p&gt;计算平台是在电脑中运行应用程序（软件）的环境，包括&lt;code&gt;硬件环境&lt;/code&gt;和&lt;code&gt;软件环境&lt;/code&gt;。一般系统平台包括一台电脑的硬件体系结构、操作系统、运行时库。&lt;/p&gt;
+&lt;p&gt;Java是快速，安全和可靠的。从笔记本电脑到数据中心，从游戏机到科学超级计算机，从手机到互联网，Java 无处不在！Java主要分为三个版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaSE（J2SE（Java2 Platform Standard Edition，java平台标准版）&lt;/li&gt;
+&lt;li&gt;JavaEE（J2EE（Java 2 Platform，Enterprise Edition，java平台企业版）&lt;/li&gt;
+&lt;li&gt;JavaME（J2ME）（Java 2 Platform Micro Edition，java平台微型版）。&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
+    <category term="Java学习" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
     
+    <category term="JavaSE" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="Java是什么" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/Java%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
     
   </entry>
   
@@ -60,16 +99,13 @@
     <link href="http://example.com/2021/12/08/hello-world/"/>
     <id>http://example.com/2021/12/08/hello-world/</id>
     <published>2021-12-07T20:25:28.754Z</published>
-    <updated>2021-12-07T20:25:28.754Z</updated>
+    <updated>2021-12-17T22:41:54.674Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     

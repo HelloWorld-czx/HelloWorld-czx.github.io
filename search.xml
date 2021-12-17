@@ -1,16 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JDK JRE JVM</title>
-    <url>/2021/12/12/JDK-JRE-JVM/</url>
-    <content><![CDATA[<p>#JDK</p>
-<p><strong>Java 开发工具</strong></p>
+    <title>JavaSE-01：注释、标识符、关键字</title>
+    <url>/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A%E3%80%81%E6%A0%87%E8%AF%86%E7%AC%A6%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><h3 id="什么是注释"><a href="#什么是注释" class="headerlink" title="什么是注释"></a>什么是注释</h3><p>注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。</p>
+<h3 id="注释的作用"><a href="#注释的作用" class="headerlink" title="注释的作用"></a>注释的作用</h3><ul>
+<li><p><strong>有助于他人阅读代码快速理解</strong></p>
+</li>
+<li><p><strong>有助于提高开发效率</strong></p>
+</li>
+<li><p><strong>有助于保持代码一致性</strong></p>
+</li>
+<li><p><strong>帮助修补程序或快速修复</strong></p>
+</li>
+<li><p><strong>有助于加快开发过程</strong></p>
+</li>
+<li><p><strong>有助于提高协作效率</strong></p>
+</li>
+</ul>
+<h3 id="Java注释有三种"><a href="#Java注释有三种" class="headerlink" title="Java注释有三种"></a>Java注释有三种</h3><ul>
+<li><p><strong>单行注释</strong></p>
+</li>
+<li><p><strong>多行注释</strong></p>
+</li>
+<li><p><strong>文档注释</strong></p>
+<hr>
+<span id="more"></span>
+
+<p><strong>单行注释</strong></p>
+<p>以双斜杠“//”标识，只能注释一行内容，用在注释信息内容少的地方。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//单行注释</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>多行注释</strong></p>
+<p>包含在“/<em>”和“</em>/”之间，能注释很多行的内容。为了可读性比较好，一般首行和尾行不写注释信息</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        <span class="comment">/*多行注释</span></span><br><span class="line"><span class="comment">        多行注释</span></span><br><span class="line"><span class="comment">        多行注释*/</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;   </span><br></pre></td></tr></table></figure>
+
+<p><strong>文档注释</strong></p>
+<p>包含在“/*<em>”和“</em>/”之间，也能注释多行内容，一般用在类、方法和变量上面，用来描述其作用。注释后，鼠标放在类和变量上面会自动显示出我们注释的内容</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    <span class="doctag">@author</span> 作者名</span></span><br><span class="line"><span class="comment">    <span class="doctag">@version</span> 版本</span></span><br><span class="line"><span class="comment">    ...</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+<p>文档注释可以通过 Javadoc 命令把文档注释中的内容生成文档，并输出到 HTML 文件中，方便记录程序信息。还可以包含一个或多个 @ 标签，每个 @ 标签都在新的一行开始。关于 Javadoc 的具体标签和使用可阅读学习《<a href="http://c.biancheng.net/view/6262.html">Javadoc入门教程</a>》一节。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Java学习</category>
+        <category>JavaSE</category>
+        <category>基础语法</category>
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java是什么</title>
+    <url>/2021/12/12/Java%E6%98%AF%E4%BB%80%E4%B9%88/</url>
+    <content><![CDATA[<h1 id="Java概述"><a href="#Java概述" class="headerlink" title="Java概述"></a>Java概述</h1><h3 id="什么是Java？"><a href="#什么是Java？" class="headerlink" title="什么是Java？"></a>什么是Java？</h3><p>Java是Sun Microsystems于1995年首次发布的一种<code>编程语言</code>和<code>计算平台</code>。编程语言还比较好理解，那么什么是<code>计算平台</code>呢？</p>
+<p>计算平台是在电脑中运行应用程序（软件）的环境，包括<code>硬件环境</code>和<code>软件环境</code>。一般系统平台包括一台电脑的硬件体系结构、操作系统、运行时库。</p>
+<p>Java是快速，安全和可靠的。从笔记本电脑到数据中心，从游戏机到科学超级计算机，从手机到互联网，Java 无处不在！Java主要分为三个版本</p>
+<ul>
+<li>JavaSE（J2SE（Java2 Platform Standard Edition，java平台标准版）</li>
+<li>JavaEE（J2EE（Java 2 Platform，Enterprise Edition，java平台企业版）</li>
+<li>JavaME（J2ME）（Java 2 Platform Micro Edition，java平台微型版）。</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="Java的特点"><a href="#Java的特点" class="headerlink" title="Java的特点"></a>Java的特点</h3><p>Java是一门面向对象的编程语言<br>什么是面向对象？<code>面向对象（object 0riented）</code> 是一种软件开发思想。它是对现实世界的一种抽象，面向对象会把相关的数据和方法组织为一个整体来看待。<br>相对的另外一种开发思想就是面向过程的开发思想，什么面向过程？<br><code>面向过程（products oriented）</code>是一种以过程为中心的编程思想。</p>
+<p>举个例子：比如你是个学生，你每天去上学需要做几件事情？<br>起床、穿衣服、洗脸刷牙，吃饭，去学校。一般是顺序性的完成一系列动作。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> </span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_wakeUp</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_cloth</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_wash</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_eating</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_gotoSchool</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而面向对象可以将学生抽象进行抽象，如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>() </span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_wakeUp</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_cloth</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_wash</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_eating</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">student_gotoSchool</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>可以不用严格按照顺序来执行每个动作。</strong></p>
+</li>
+<li><p><strong>Java摒弃了C++中难以理解的多继承、指针、内存管理等概念；不用手动管理对象的生命周期。</strong>这是特点一</p>
+</li>
+<li><p><strong>Java 语言具有功能强大和简单易用两个特征，现在企业级开发，快速敏捷开发，尤其是各种框架的出现，使Java成为越来越火的一门语言。</strong>这是特点二</p>
+</li>
+<li><p><strong>Java是一门静态语言，静态语言指的就是在编译期间就能够知道数据类型的语言，在运行前就能够检查类型的正确性，一旦类型确定后就不能再更改</strong>，这是特点三，比如下面这个例子。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> <span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line"> <span class="keyword">boolean</span> b = x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>静态语言主要有<strong>Pascal，Perl，C/C++，JAVA，C#，Scala</strong>等。<br>相对应的，动态语言没有任何特定的情况需要指定变量的类型，在运行时确定的数据类型。比如有<strong>Lisp，Perl，Python、Ruby、JavaScript</strong>等。<br>从设计的角度上来说，所有的语言都是设计用来把人类可读的代码转换为机器指令。动态语言是为了能够让程序员提高编码效率，因此你可以使用更少的代码来实现功能。静态语言设计是用来让硬件执行的更高效，因此需要程序员编写准确无误的代码，以此来让你的代码尽快的执行。从这个角度来说，静态语言的执行效率要比动态语言高，速度更快。这是特点四。</p>
+<ul>
+<li><strong>Java具有平台独立性和可移植性</strong></li>
+</ul>
+<p>Java 有一句非常著名的口号：<code>write once，run anywhere</code>，也就是一次编写、到处运行。为什么Java能够吹出这种牛批的口号来？核心就是。我们知道，计算机应用程序和硬件之间会屏蔽很多细节，它们之间依靠操作系统完成调度和协调，大致的体系结构如下</p>
+<img src="https://pic.imgdb.cn/item/61bc46522ab3f51d916348a2.png" style="zoom:67%;" >
+
+<p>加上Java应用和JVM的体系结构变为如下：</p>
+<img src="https://pic.imgdb.cn/item/61bd039a2ab3f51d91cd7c2f.png" style="zoom:67%;" >
+
+<ul>
+<li><strong>Java是跨平台的，已编译的Java程序可以在任何带有JVM的平台上运行。</strong></li>
+</ul>
+<p>你可以在Windows平台下编写代码，然后拿到Linux平台下运行，该如何实现呢？</p>
+<p>首先你需要在应用中编写Java代码；用pse 或者 把Java代码编译为os文件；然后把你的.class文件打成文件；然后你的.jar 文件就能够在Windows、Mac OSX、Linux系统下运行了。不同的操作系统有不同的JVM实现，切换平台时，不需要再次编译你的Java代码了。这是特点五。</p>
+<ul>
+<li><strong>Java能够容易实现多线程</strong></li>
+</ul>
+<p>Java是一门高级语言，高级语言会对用户屏蔽很多底层实现细节。比如Java是如何实现多线程的。从操作系统的角度来说，实现多线程的方式主要有下面这几种<br>在用户空间中实现多线程在内核空间中实现多线程<br>在用户和内核空间中混合实现线程<br>而我认为Java应该是在实现的多线程，内核是感知不到Java存在多线程机制的。这是特点六。</p>
+<ul>
+<li><strong>Java具有高性能</strong></li>
+</ul>
+<p>我们编写的代码，经过javac编译器编译称为码（bytecod，经过JVM内嵌的解释器将字节码转换为机器代码，这是解释执行，这种转换过程效率较低。但是部分JVM的实现比如都提供了（umm）编译器，也就是通常所说的动态编译器，JIT能够在运行时将热点代码编译机器码，这种方式运行效率比较高，这是编译执行。所以Java不仅仅只是一种解释执行的语言。</p>
+<ul>
+<li><strong>Java语言具有健壮性</strong></li>
+</ul>
+<p>Java的强类型机制、异常处理、垃圾的自动收集等是Java程序健壮性的重要保证。这也是Java与C语言的重要区别。这是特点八</p>
+<ul>
+<li><strong>Java很容易开发分布式项目</strong></li>
+</ul>
+<p>Java 语言支持Internet 应用的开发，Java中有net api，它提供了用于网络应用编程的类库，包括URL、URLConnection、Socket、ServerSocket等。Java的能方法活机制也是开发分布式应用的重要手段。这是特点九。</p>
+<h1 id="Java开发环境"><a href="#Java开发环境" class="headerlink" title="Java开发环境"></a>Java开发环境</h1><h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p><code>JDK（Java Development Kit）</code>称为Java 开发包或Java开发工具，是一个编写Java的Applet小程序和应用程序的程序开发环境。JDK是整个Java的核心，包括了<code>运行环境（Java Runtime Environment）</code>，一些<code>Java工具和Java的核心类库（API）。</code></p>
+<img src="https://pic.imgdb.cn/item/61bd0bff2ab3f51d91cf14e9.png"    >
+
+<p>我们可以认真研究一下这张图，它几乎包括了Java中所有的概念，我使用的是<code>jk1.8 </code>， 可以点进去<code>Descriptin of Java Conceptual Diagram</code>，  可以发现这里面包括了所有关于Java的描述。</p>
+<p>Oracle 提供了两种Java平台的实现，一种是我们上面说的JDK，Java开发标准工具包，一种是JRE，叫做Java Runtime Environment，Java 运行时环境。JDK的功能要比JRE全很多。</p>
+<h3 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h3><p>JRE 是个运行环境，JDK是个开发环境。因此写Java程序的时候需要JDK，而运行Java程序的时候就需要JRE。而JDK里面已经包含了JRE，因此只要安装了JDK，就可以编辑 Java 程序，也可以正常运行Java程序。但由于JDK包含了许多与运行无关的内容，占用的空间较大，因此运行普通的Java程序无须安装JDK，而只需要安装JRE即可。</p>
+<h3 id="Java开发环境配置"><a href="#Java开发环境配置" class="headerlink" title="Java开发环境配置"></a>Java开发环境配置</h3><p>自行度娘或者ＣＳＤＮ技术社区、博客园等搜索</p>
+]]></content>
+      <categories>
+        <category>Java学习</category>
+        <category>JavaSE</category>
+        <category>Java是什么</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
       </tags>
   </entry>
   <entry>
@@ -20,6 +143,8 @@
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
@@ -30,10 +155,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>陈镇溪的第一篇博客文章</title>
-    <url>/2021/12/08/%E9%99%88%E9%95%87%E6%BA%AA%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
