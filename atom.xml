@@ -3,11 +3,11 @@
   <title>墨歌</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://mogeblog.cn/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2021-12-17T22:39:42.894Z</updated>
-  <id>http://example.com/</id>
+  <link href="http://mogeblog.cn/"/>
+  <updated>2021-12-19T09:25:09.131Z</updated>
+  <id>http://mogeblog.cn/</id>
   
   <author>
     <name>墨歌</name>
@@ -17,11 +17,232 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JavaSE-01：注释、标识符、关键字</title>
-    <link href="http://example.com/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A%E3%80%81%E6%A0%87%E8%AF%86%E7%AC%A6%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97/"/>
-    <id>http://example.com/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A%E3%80%81%E6%A0%87%E8%AF%86%E7%AC%A6%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97/</id>
+    <title>JavaSE-04：数据类型扩展</title>
+    <link href="http://mogeblog.cn/2021/12/14/JavaSE-04%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%89%A9%E5%B1%95/"/>
+    <id>http://mogeblog.cn/2021/12/14/JavaSE-04%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%89%A9%E5%B1%95/</id>
+    <published>2021-12-14T02:45:36.000Z</published>
+    <updated>2021-12-19T09:25:09.131Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;标识符&quot;&gt;&lt;a href=&quot;#标识符&quot; class=&quot;headerlink&quot; title=&quot;标识符&quot;&gt;&lt;/a&gt;标识符&lt;/h1&gt;&lt;h1 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h1&gt;&lt;h4 id=&quot;强语言类型&quot;&gt;&lt;a href=&quot;#强语言类型&quot; class=&quot;headerlink&quot; title=&quot;强语言类型&quot;&gt;&lt;/a&gt;强语言类型&lt;/h4&gt;&lt;p&gt;​    要求变量的使用要严格符规定，所有变量都必须先定义后使用&lt;/p&gt;
+&lt;h4 id=&quot;弱语言类型&quot;&gt;&lt;a href=&quot;#弱语言类型&quot; class=&quot;headerlink&quot; title=&quot;弱语言类型&quot;&gt;&lt;/a&gt;弱语言类型&lt;/h4&gt;&lt;p&gt;​    数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。&lt;/p&gt;
+&lt;h4 id=&quot;Java的数据类型分为两大类&quot;&gt;&lt;a href=&quot;#Java的数据类型分为两大类&quot; class=&quot;headerlink&quot; title=&quot;Java的数据类型分为两大类&quot;&gt;&lt;/a&gt;Java的数据类型分为两大类&lt;/h4&gt;&lt;p&gt;​    &lt;strong&gt;基本类型（primitive type）&lt;/strong&gt;&lt;br&gt;​    &lt;strong&gt;引用类型（reference type）&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&quot;https://pic.imgdb.cn/item/61be53092ab3f51d9160ef17.jpg&quot; style=&quot;zoom: 80%;&quot; &gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;数据类型&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;占用字节&lt;/th&gt;
+&lt;th&gt;取值范围&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;整型，用于存储整数&lt;/td&gt;
+&lt;td&gt;4个字节&lt;/td&gt;
+&lt;td&gt;-2147483648~2147483647&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;Java中最小的数据类型&lt;/td&gt;
+&lt;td&gt;1个字节&lt;/td&gt;
+&lt;td&gt;-128~127&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;short&lt;/td&gt;
+&lt;td&gt;短整型&lt;/td&gt;
+&lt;td&gt;2个字节&lt;/td&gt;
+&lt;td&gt;-32768~32717&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;长整型&lt;/td&gt;
+&lt;td&gt;8个字节&lt;/td&gt;
+&lt;td&gt;-2^63~2^63-1&lt;/td&gt;
+&lt;td&gt;0L&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;float&lt;/td&gt;
+&lt;td&gt;浮点型，用于存储带小数点的数字&lt;/td&gt;
+&lt;td&gt;4个字节&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;0.0f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;double&lt;/td&gt;
+&lt;td&gt;双精度浮点型，用于存储带有小数点的数字&lt;/td&gt;
+&lt;td&gt;8个字节&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;0.0d&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;td&gt;字符型，用于存储单个字符&lt;/td&gt;
+&lt;td&gt;2个字节&lt;/td&gt;
+&lt;td&gt;0~65535&lt;/td&gt;
+&lt;td&gt;空&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;布尔类型，用于判断真或假&lt;/td&gt;
+&lt;td&gt;1个字节&lt;/td&gt;
+&lt;td&gt;仅有两个值，即true、false&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaSE-03：数据类型</title>
+    <link href="http://mogeblog.cn/2021/12/14/JavaSE-03%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://mogeblog.cn/2021/12/14/JavaSE-03%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2021-12-14T01:17:52.000Z</published>
+    <updated>2021-12-19T09:23:52.727Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;标识符&quot;&gt;&lt;a href=&quot;#标识符&quot; class=&quot;headerlink&quot; title=&quot;标识符&quot;&gt;&lt;/a&gt;标识符&lt;/h1&gt;&lt;h1 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h1&gt;&lt;h4 id=&quot;强语言类型&quot;&gt;&lt;a href=&quot;#强语言类型&quot; class=&quot;headerlink&quot; title=&quot;强语言类型&quot;&gt;&lt;/a&gt;强语言类型&lt;/h4&gt;&lt;p&gt;​    要求变量的使用要严格符规定，所有变量都必须先定义后使用&lt;/p&gt;
+&lt;h4 id=&quot;弱语言类型&quot;&gt;&lt;a href=&quot;#弱语言类型&quot; class=&quot;headerlink&quot; title=&quot;弱语言类型&quot;&gt;&lt;/a&gt;弱语言类型&lt;/h4&gt;&lt;p&gt;​    数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。&lt;/p&gt;
+&lt;h4 id=&quot;Java的数据类型分为两大类&quot;&gt;&lt;a href=&quot;#Java的数据类型分为两大类&quot; class=&quot;headerlink&quot; title=&quot;Java的数据类型分为两大类&quot;&gt;&lt;/a&gt;Java的数据类型分为两大类&lt;/h4&gt;&lt;p&gt;​    &lt;strong&gt;基本类型（primitive type）&lt;/strong&gt;&lt;br&gt;​    &lt;strong&gt;引用类型（reference type）&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&quot;https://pic.imgdb.cn/item/61be53092ab3f51d9160ef17.jpg&quot; style=&quot;zoom: 80%;&quot; &gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;数据类型&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;占用字节&lt;/th&gt;
+&lt;th&gt;取值范围&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;整型，用于存储整数&lt;/td&gt;
+&lt;td&gt;4个字节&lt;/td&gt;
+&lt;td&gt;-2147483648~2147483647&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;Java中最小的数据类型&lt;/td&gt;
+&lt;td&gt;1个字节&lt;/td&gt;
+&lt;td&gt;-128~127&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;short&lt;/td&gt;
+&lt;td&gt;短整型&lt;/td&gt;
+&lt;td&gt;2个字节&lt;/td&gt;
+&lt;td&gt;-32768~32717&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;长整型&lt;/td&gt;
+&lt;td&gt;8个字节&lt;/td&gt;
+&lt;td&gt;-2^63~2^63-1&lt;/td&gt;
+&lt;td&gt;0L&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;float&lt;/td&gt;
+&lt;td&gt;浮点型，用于存储带小数点的数字&lt;/td&gt;
+&lt;td&gt;4个字节&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;0.0f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;double&lt;/td&gt;
+&lt;td&gt;双精度浮点型，用于存储带有小数点的数字&lt;/td&gt;
+&lt;td&gt;8个字节&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;0.0d&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;td&gt;字符型，用于存储单个字符&lt;/td&gt;
+&lt;td&gt;2个字节&lt;/td&gt;
+&lt;td&gt;0~65535&lt;/td&gt;
+&lt;td&gt;空&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;布尔类型，用于判断真或假&lt;/td&gt;
+&lt;td&gt;1个字节&lt;/td&gt;
+&lt;td&gt;仅有两个值，即true、false&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaSE-02：标识符　关键字</title>
+    <link href="http://mogeblog.cn/2021/12/13/JavaSE-02%EF%BC%9A%E6%A0%87%E8%AF%86%E7%AC%A6%20%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    <id>http://mogeblog.cn/2021/12/13/JavaSE-02%EF%BC%9A%E6%A0%87%E8%AF%86%E7%AC%A6%20%E5%85%B3%E9%94%AE%E5%AD%97/</id>
+    <published>2021-12-13T05:37:50.000Z</published>
+    <updated>2021-12-18T20:54:59.170Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;标识符&quot;&gt;&lt;a href=&quot;#标识符&quot; class=&quot;headerlink&quot; title=&quot;标识符&quot;&gt;&lt;/a&gt;标识符&lt;/h1&gt;&lt;h3 id=&quot;关键字&quot;&gt;&lt;a href=&quot;#关键字&quot; class=&quot;headerlink&quot; title=&quot;关键字&quot;&gt;&lt;/a&gt;关键字&lt;/h3&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/61bda58a2ab3f51d910d6c49.png&quot; style=&quot;zoom: 67%;&quot; &gt;
+
+
+
+&lt;h4 id=&quot;java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。&quot;&gt;&lt;a href=&quot;#java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。&quot; class=&quot;headerlink&quot; title=&quot;java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。&quot;&gt;&lt;/a&gt;java所有的组成部分都需要名字。&lt;code&gt;类名、变量名以及方法名&lt;/code&gt;都被称为标识符。&lt;/h4&gt;</summary>
+    
+    
+    
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaSE-01：注释</title>
+    <link href="http://mogeblog.cn/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/"/>
+    <id>http://mogeblog.cn/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/</id>
     <published>2021-12-13T01:38:22.000Z</published>
-    <updated>2021-12-17T22:39:42.894Z</updated>
+    <updated>2021-12-18T20:45:26.545Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;注释&quot;&gt;&lt;a href=&quot;#注释&quot; class=&quot;headerlink&quot; title=&quot;注释&quot;&gt;&lt;/a&gt;注释&lt;/h1&gt;&lt;h3 id=&quot;什么是注释&quot;&gt;&lt;a href=&quot;#什么是注释&quot; class=&quot;headerlink&quot; title=&quot;什么是注释&quot;&gt;&lt;/a&gt;什么是注释&lt;/h3&gt;&lt;p&gt;注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。&lt;/p&gt;
@@ -49,23 +270,23 @@
     
     
     
-    <category term="Java学习" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="JavaSE" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
     
-    <category term="基础语法" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
     
-    <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
     
   </entry>
   
   <entry>
     <title>Java是什么</title>
-    <link href="http://example.com/2021/12/12/Java%E6%98%AF%E4%BB%80%E4%B9%88/"/>
-    <id>http://example.com/2021/12/12/Java%E6%98%AF%E4%BB%80%E4%B9%88/</id>
+    <link href="http://mogeblog.cn/2021/12/12/Java%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    <id>http://mogeblog.cn/2021/12/12/Java%E6%98%AF%E4%BB%80%E4%B9%88/</id>
     <published>2021-12-12T03:39:22.000Z</published>
     <updated>2021-12-17T22:40:20.739Z</updated>
     
@@ -81,23 +302,23 @@
     
     
     
-    <category term="Java学习" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="JavaSE" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
     
-    <category term="Java是什么" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/Java%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    <category term="Java是什么" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/Java%E6%98%AF%E4%BB%80%E4%B9%88/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
     
-    <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/12/08/hello-world/"/>
-    <id>http://example.com/2021/12/08/hello-world/</id>
+    <link href="http://mogeblog.cn/2021/12/08/hello-world/"/>
+    <id>http://mogeblog.cn/2021/12/08/hello-world/</id>
     <published>2021-12-07T20:25:28.754Z</published>
     <updated>2021-12-17T22:41:54.674Z</updated>
     
