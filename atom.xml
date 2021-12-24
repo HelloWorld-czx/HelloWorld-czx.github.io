@@ -6,7 +6,7 @@
   <link href="http://mogeblog.cn/atom.xml" rel="self"/>
   
   <link href="http://mogeblog.cn/"/>
-  <updated>2021-12-19T09:25:09.131Z</updated>
+  <updated>2021-12-24T09:27:59.652Z</updated>
   <id>http://mogeblog.cn/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaSE-06：变量 常量 作用域</title>
+    <link href="http://mogeblog.cn/2021/12/15/JavaSE-06%EF%BC%9A%E5%8F%98%E9%87%8F%20%E5%B8%B8%E9%87%8F%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://mogeblog.cn/2021/12/15/JavaSE-06%EF%BC%9A%E5%8F%98%E9%87%8F%20%E5%B8%B8%E9%87%8F%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
+    <published>2021-12-15T04:30:32.000Z</published>
+    <updated>2021-12-24T09:27:59.652Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaSE-05：类型转换</title>
+    <link href="http://mogeblog.cn/2021/12/15/JavaSE-05%EF%BC%9A%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://mogeblog.cn/2021/12/15/JavaSE-05%EF%BC%9A%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</id>
+    <published>2021-12-15T03:20:56.000Z</published>
+    <updated>2021-12-23T13:00:54.794Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Java类型转换&quot;&gt;&lt;a href=&quot;#Java类型转换&quot; class=&quot;headerlink&quot; title=&quot;Java类型转换&quot;&gt;&lt;/a&gt;Java类型转换&lt;/h1&gt;&lt;h3 id=&quot;Java的基本数据类型包括八种：&quot;&gt;&lt;a href=&quot;#Java的基本数据类型包括八种：&quot; class=&quot;headerlink&quot; title=&quot;Java的基本数据类型包括八种：&quot;&gt;&lt;/a&gt;Java的基本数据类型包括八种：&lt;/h3&gt;&lt;p&gt;整数类型（byte,short,int long）&lt;/p&gt;
+&lt;p&gt;浮点数类型（double,float）&lt;/p&gt;
+&lt;p&gt;布尔类型（boolean）&lt;/p&gt;
+&lt;p&gt;字符类型（char）&lt;/p&gt;
+&lt;p&gt;类型从小到大依次为：&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;byte short int long float double&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(char)&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Java的基本类型转换的两种方式&quot;&gt;&lt;a href=&quot;#Java的基本类型转换的两种方式&quot; class=&quot;headerlink&quot; title=&quot;Java的基本类型转换的两种方式&quot;&gt;&lt;/a&gt;Java的基本类型转换的两种方式&lt;/h3&gt;&lt;h4 id=&quot;自动（隐式）类型转换：从小类型到大类型，不需要强制转换符&quot;&gt;&lt;a href=&quot;#自动（隐式）类型转换：从小类型到大类型，不需要强制转换符&quot; class=&quot;headerlink&quot; title=&quot;自动（隐式）类型转换：从小类型到大类型，不需要强制转换符&quot;&gt;&lt;/a&gt;自动（隐式）类型转换：从小类型到大类型，不需要强制转换符&lt;/h4&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;demo&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; num2 = num1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 小类型转换成大类型，int类型变量a的值会自动转换成double类型并赋值给变量b&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;h4 id=&quot;强制类型转换：从大类型到小类型，需要强制转换符实现强制转换-强制转换符：（需要转换成的类型）变量&quot;&gt;&lt;a href=&quot;#强制类型转换：从大类型到小类型，需要强制转换符实现强制转换-强制转换符：（需要转换成的类型）变量&quot; class=&quot;headerlink&quot; title=&quot;强制类型转换：从大类型到小类型，需要强制转换符实现强制转换 强制转换符：（需要转换成的类型）变量&quot;&gt;&lt;/a&gt;强制类型转换：从大类型到小类型，需要强制转换符实现强制转换 强制转换符：（需要转换成的类型）变量&lt;/h4&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;demo&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; num3 = &lt;span class=&quot;number&quot;&gt;1.23&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; num4 = (&lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt;)num3;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//大类型转换成小类型，需要强制转换符先将double类型变量a的值转换成byte类型再赋值给byte类型变量b&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;关于byte、short、char赋值与运算的强转规则：&quot;&gt;&lt;a href=&quot;#关于byte、short、char赋值与运算的强转规则：&quot; class=&quot;headerlink&quot; title=&quot;关于byte、short、char赋值与运算的强转规则：&quot;&gt;&lt;/a&gt;关于byte、short、char赋值与运算的强转规则：&lt;/h4&gt;</summary>
+    
+    
+    
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaSE-04：数据类型扩展</title>
@@ -320,7 +389,7 @@
     <link href="http://mogeblog.cn/2021/12/08/hello-world/"/>
     <id>http://mogeblog.cn/2021/12/08/hello-world/</id>
     <published>2021-12-07T20:25:28.754Z</published>
-    <updated>2021-12-17T22:41:54.674Z</updated>
+    <updated>2021-12-23T12:02:18.408Z</updated>
     
     
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;

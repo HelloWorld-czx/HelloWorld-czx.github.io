@@ -1,50 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaSE-01：注释</title>
-    <url>/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/</url>
-    <content><![CDATA[<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><h3 id="什么是注释"><a href="#什么是注释" class="headerlink" title="什么是注释"></a>什么是注释</h3><p>注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。</p>
-<h3 id="注释的作用"><a href="#注释的作用" class="headerlink" title="注释的作用"></a>注释的作用</h3><ul>
-<li><p><strong>有助于他人阅读代码快速理解</strong></p>
-</li>
-<li><p><strong>有助于提高开发效率</strong></p>
-</li>
-<li><p><strong>有助于保持代码一致性</strong></p>
-</li>
-<li><p><strong>帮助修补程序或快速修复</strong></p>
-</li>
-<li><p><strong>有助于加快开发过程</strong></p>
-</li>
-<li><p><strong>有助于提高协作效率</strong></p>
-</li>
+    <title>JavaSE-06：变量 常量 作用域</title>
+    <url>/2021/12/15/JavaSE-06%EF%BC%9A%E5%8F%98%E9%87%8F%20%E5%B8%B8%E9%87%8F%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p><strong>变量是什么：就是可以变化的量！</strong><br><strong>Java是一种强类型语言，每个变量都必须声明其类型。</strong><br><strong>Java变量是程序中最基本的存储单元，其要素包括变量名，变量类型和作用域。</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> num1 =<span class="number">1</span>；<span class="comment">// 变量类型 变量名 = 变量值</span></span><br><span class="line"><span class="keyword">int</span> num2 =<span class="number">1</span>,<span class="number">2</span>；<span class="comment">// 变量类型 变量名 = 变量值1 , 变量值2,...</span></span><br><span class="line"><span class="comment">//数据类型变量名=值；可以使用逗号隔开来声明多个同类型变量。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h4><ul>
+<li>每个变量都有类型，类型可以是基本类型，也可以是引用类型。</li>
+<li>变量名必须是合法的标识符。</li>
+<li>变量声明是一条完整的语句，因此每一个声明都必须以分号结束</li>
 </ul>
-<h3 id="Java注释有三种"><a href="#Java注释有三种" class="headerlink" title="Java注释有三种"></a>Java注释有三种</h3><ul>
-<li><p><strong>单行注释</strong></p>
-</li>
-<li><p><strong>多行注释</strong></p>
-</li>
-<li><p><strong>文档注释</strong></p>
-<hr>
-<span id="more"></span>
-
-<p><strong>单行注释</strong></p>
-<p>以双斜杠“//”标识，只能注释一行内容，用在注释信息内容少的地方。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//单行注释</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>多行注释</strong></p>
-<p>包含在“/<em>”和“</em>/”之间，能注释很多行的内容。为了可读性比较好，一般首行和尾行不写注释信息</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">/*多行注释</span></span><br><span class="line"><span class="comment">        多行注释</span></span><br><span class="line"><span class="comment">        多行注释*/</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;   </span><br></pre></td></tr></table></figure>
-
-<p><strong>文档注释</strong></p>
-<p>包含在“/*<em>”和“</em>/”之间，也能注释多行内容，一般用在类、方法和变量上面，用来描述其作用。注释后，鼠标放在类和变量上面会自动显示出我们注释的内容</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    <span class="doctag">@author</span> 作者名</span></span><br><span class="line"><span class="comment">    <span class="doctag">@version</span> 版本</span></span><br><span class="line"><span class="comment">    ...</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-
-<p>文档注释可以通过 Javadoc 命令把文档注释中的内容生成文档，并输出到 HTML 文件中，方便记录程序信息。还可以包含一个或多个 @ 标签，每个 @ 标签都在新的一行开始。关于 Javadoc 的具体标签和使用可阅读学习《<a href="http://c.biancheng.net/view/6262.html">Javadoc入门教程</a>》一节。</p>
-</li>
+<h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><ul>
+<li>类变量（静态变量）</li>
+<li>实例变量</li>
+<li>局部变量</li>
 </ul>
 ]]></content>
       <categories>
@@ -58,27 +30,33 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaSE-02：标识符　关键字</title>
-    <url>/2021/12/13/JavaSE-02%EF%BC%9A%E6%A0%87%E8%AF%86%E7%AC%A6%20%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[<h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><img src="https://pic.imgdb.cn/item/61bda58a2ab3f51d910d6c49.png" style="zoom: 67%;" >
+    <title>JavaSE-05：类型转换</title>
+    <url>/2021/12/15/JavaSE-05%EF%BC%9A%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<h1 id="Java类型转换"><a href="#Java类型转换" class="headerlink" title="Java类型转换"></a>Java类型转换</h1><h3 id="Java的基本数据类型包括八种："><a href="#Java的基本数据类型包括八种：" class="headerlink" title="Java的基本数据类型包括八种："></a>Java的基本数据类型包括八种：</h3><p>整数类型（byte,short,int long）</p>
+<p>浮点数类型（double,float）</p>
+<p>布尔类型（boolean）</p>
+<p>字符类型（char）</p>
+<p>类型从小到大依次为：</p>
+<p> <strong>byte short int long float double</strong> </p>
+<p><strong>(char)</strong></p>
+<h3 id="Java的基本类型转换的两种方式"><a href="#Java的基本类型转换的两种方式" class="headerlink" title="Java的基本类型转换的两种方式"></a>Java的基本类型转换的两种方式</h3><h4 id="自动（隐式）类型转换：从小类型到大类型，不需要强制转换符"><a href="#自动（隐式）类型转换：从小类型到大类型，不需要强制转换符" class="headerlink" title="自动（隐式）类型转换：从小类型到大类型，不需要强制转换符"></a>自动（隐式）类型转换：从小类型到大类型，不需要强制转换符</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">6</span>;</span><br><span class="line">        <span class="keyword">double</span> num2 = num1;</span><br><span class="line">        <span class="comment">// 小类型转换成大类型，int类型变量a的值会自动转换成double类型并赋值给变量b</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"><a href="#java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。" class="headerlink" title="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"></a>java所有的组成部分都需要名字。<code>类名、变量名以及方法名</code>都被称为标识符。</h4><span id="more"></span>
+<h4 id="强制类型转换：从大类型到小类型，需要强制转换符实现强制转换-强制转换符：（需要转换成的类型）变量"><a href="#强制类型转换：从大类型到小类型，需要强制转换符实现强制转换-强制转换符：（需要转换成的类型）变量" class="headerlink" title="强制类型转换：从大类型到小类型，需要强制转换符实现强制转换 强制转换符：（需要转换成的类型）变量"></a>强制类型转换：从大类型到小类型，需要强制转换符实现强制转换 强制转换符：（需要转换成的类型）变量</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">float</span> num3 = <span class="number">1.23</span>;</span><br><span class="line">        <span class="keyword">byte</span> num4 = (<span class="keyword">byte</span>)num3;</span><br><span class="line">        <span class="comment">//大类型转换成小类型，需要强制转换符先将double类型变量a的值转换成byte类型再赋值给byte类型变量b</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="标识符注意点"><a href="#标识符注意点" class="headerlink" title="标识符注意点"></a>标识符注意点</h3><ul>
-<li><strong>所有的标识符都应该以字母（A-Z或者a-z），美元符（$）、或者下划线（）开始</strong></li>
-<li><strong>首字符不能为数字</strong></li>
-<li><strong>首字符之后可以是字母（A-Z或者a-z），美元符（$）、下划线（）或数字的任何字符组合</strong></li>
-<li><strong>不能使用关键字作为变量名或方法名</strong></li>
-<li><strong>不能包含空格</strong></li>
-<li><strong>标识符是大小写敏感的</strong></li>
-<li><strong>合法标识符举例：age、$salary、_value、_1 value</strong></li>
-<li><strong>非法标识符举例：123abc、-salary、#abc public static void main（String[]args）{</strong></li>
-<li><strong>可以使用中文命名，不建议使用，也不建议使用拼音，字符集警告</strong>！！！</li>
+<h4 id="关于byte、short、char赋值与运算的强转规则："><a href="#关于byte、short、char赋值与运算的强转规则：" class="headerlink" title="关于byte、short、char赋值与运算的强转规则："></a>关于byte、short、char赋值与运算的强转规则：</h4><span id="more"></span>
+
+<ul>
+<li>不参加运算时，byte、short、char赋值的默认整数值，无需强转</li>
+<li>参加运算时，byte、short、char赋值的默认整数值，需强转，转换成对应的结果值类型</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 标识符正确格式，一般用英文字母单词就够用</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Ahello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String $hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String _hllo=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String 你好=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符错误格式，会提示报错</span></span><br><span class="line">        String 123hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String #hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String *hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符大小写敏感，同名但字母存在大小写差异，所以实质上还是不同的属性并储存在不同的位置</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String HELLO=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">byte</span> a = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">short</span> b = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">char</span> c = (<span class="keyword">char</span>)(a+b);</span><br><span class="line">        <span class="comment">/*b1与b2不参与运算，整数直接量可以直接赋值给byte；</span></span><br><span class="line"><span class="comment">        参与运算后，b1+b2和的值默认为int类型,需要强制转换成byte类型再赋值给byte类型变量b3</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>强转有可能产生精度丢失</li>
+<li>例如：double类型变量a的值为3.14，强制转换成int类型后数值为3，小数位舍弃，产生了精度丢失。</li>
+</ul>
 ]]></content>
       <categories>
         <category>Java学习</category>
@@ -295,24 +273,94 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/12/08/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>JavaSE-02：标识符　关键字</title>
+    <url>/2021/12/13/JavaSE-02%EF%BC%9A%E6%A0%87%E8%AF%86%E7%AC%A6%20%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><img src="https://pic.imgdb.cn/item/61bda58a2ab3f51d910d6c49.png" style="zoom: 67%;" >
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+
+
+<h4 id="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"><a href="#java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。" class="headerlink" title="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"></a>java所有的组成部分都需要名字。<code>类名、变量名以及方法名</code>都被称为标识符。</h4><span id="more"></span>
+
+<h3 id="标识符注意点"><a href="#标识符注意点" class="headerlink" title="标识符注意点"></a>标识符注意点</h3><ul>
+<li><strong>所有的标识符都应该以字母（A-Z或者a-z），美元符（$）、或者下划线（）开始</strong></li>
+<li><strong>首字符不能为数字</strong></li>
+<li><strong>首字符之后可以是字母（A-Z或者a-z），美元符（$）、下划线（）或数字的任何字符组合</strong></li>
+<li><strong>不能使用关键字作为变量名或方法名</strong></li>
+<li><strong>不能包含空格</strong></li>
+<li><strong>标识符是大小写敏感的</strong></li>
+<li><strong>合法标识符举例：age、$salary、_value、_1 value</strong></li>
+<li><strong>非法标识符举例：123abc、-salary、#abc public static void main（String[]args）{</strong></li>
+<li><strong>可以使用中文命名，不建议使用，也不建议使用拼音，字符集警告</strong>！！！</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 标识符正确格式，一般用英文字母单词就够用</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Ahello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String $hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String _hllo=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String 你好=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符错误格式，会提示报错</span></span><br><span class="line">        String 123hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String #hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String *hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符大小写敏感，同名但字母存在大小写差异，所以实质上还是不同的属性并储存在不同的位置</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String HELLO=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java学习</category>
+        <category>JavaSE</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaSE-01：注释</title>
+    <url>/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/</url>
+    <content><![CDATA[<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><h3 id="什么是注释"><a href="#什么是注释" class="headerlink" title="什么是注释"></a>什么是注释</h3><p>注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。</p>
+<h3 id="注释的作用"><a href="#注释的作用" class="headerlink" title="注释的作用"></a>注释的作用</h3><ul>
+<li><p><strong>有助于他人阅读代码快速理解</strong></p>
+</li>
+<li><p><strong>有助于提高开发效率</strong></p>
+</li>
+<li><p><strong>有助于保持代码一致性</strong></p>
+</li>
+<li><p><strong>帮助修补程序或快速修复</strong></p>
+</li>
+<li><p><strong>有助于加快开发过程</strong></p>
+</li>
+<li><p><strong>有助于提高协作效率</strong></p>
+</li>
+</ul>
+<h3 id="Java注释有三种"><a href="#Java注释有三种" class="headerlink" title="Java注释有三种"></a>Java注释有三种</h3><ul>
+<li><p><strong>单行注释</strong></p>
+</li>
+<li><p><strong>多行注释</strong></p>
+</li>
+<li><p><strong>文档注释</strong></p>
+<hr>
 <span id="more"></span>
 
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p><strong>单行注释</strong></p>
+<p>以双斜杠“//”标识，只能注释一行内容，用在注释信息内容少的地方。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//单行注释</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><strong>多行注释</strong></p>
+<p>包含在“/<em>”和“</em>/”之间，能注释很多行的内容。为了可读性比较好，一般首行和尾行不写注释信息</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">/*多行注释</span></span><br><span class="line"><span class="comment">        多行注释</span></span><br><span class="line"><span class="comment">        多行注释*/</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;   </span><br></pre></td></tr></table></figure>
+
+<p><strong>文档注释</strong></p>
+<p>包含在“/*<em>”和“</em>/”之间，也能注释多行内容，一般用在类、方法和变量上面，用来描述其作用。注释后，鼠标放在类和变量上面会自动显示出我们注释的内容</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    <span class="doctag">@author</span> 作者名</span></span><br><span class="line"><span class="comment">    <span class="doctag">@version</span> 版本</span></span><br><span class="line"><span class="comment">    ...</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+<p>文档注释可以通过 Javadoc 命令把文档注释中的内容生成文档，并输出到 HTML 文件中，方便记录程序信息。还可以包含一个或多个 @ 标签，每个 @ 标签都在新的一行开始。关于 Javadoc 的具体标签和使用可阅读学习《<a href="http://c.biancheng.net/view/6262.html">Javadoc入门教程</a>》一节。</p>
+</li>
+</ul>
 ]]></content>
+      <categories>
+        <category>Java学习</category>
+        <category>JavaSE</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java是什么</title>
@@ -392,5 +440,25 @@
         <tag>Java</tag>
         <tag>JavaSE</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/12/08/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
