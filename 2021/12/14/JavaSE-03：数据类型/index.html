@@ -100,7 +100,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">657</span>
+            <span class="post-count">719</span>
         </span>
     </span>
 
@@ -124,7 +124,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h4 id="强语言类型"><a href="#强语言类型" class="headerlink" title="强语言类型"></a>强语言类型</h4><p>​    要求变量的使用要严格符规定，所有变量都必须先定义后使用</p>
+  <h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h4 id="强语言类型"><a href="#强语言类型" class="headerlink" title="强语言类型"></a>强语言类型</h4><p>​    要求变量的使用要严格符规定，所有变量都必须先定义后使用</p>
 <h4 id="弱语言类型"><a href="#弱语言类型" class="headerlink" title="弱语言类型"></a>弱语言类型</h4><p>​    数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。</p>
 <h4 id="Java的数据类型分为两大类"><a href="#Java的数据类型分为两大类" class="headerlink" title="Java的数据类型分为两大类"></a>Java的数据类型分为两大类</h4><p>​    <strong>基本类型（primitive type）</strong><br>​    <strong>引用类型（reference type）</strong></p>
 <img src="https://pic.imgdb.cn/item/61be53092ab3f51d9160ef17.jpg" style="zoom: 80%;" >
@@ -204,14 +204,15 @@
 <p>基本数据类型和引用类型的区别主要在于基本数据类型是分配在栈上的，而引用类型是分配在堆上的</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(Stirng[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//八大基本数据类型</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//整数</span></span><br><span class="line">        <span class="keyword">byte</span> num1 = <span class="number">127</span>;</span><br><span class="line">        <span class="keyword">short</span> num2 = <span class="number">32717</span>;</span><br><span class="line">        <span class="keyword">int</span> num3 = <span class="number">23647</span>;</span><br><span class="line">        <span class="keyword">long</span> num4 = <span class="number">124L</span>; <span class="comment">//long类型数据数字后面需要加L表示</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮点数（小数）</span></span><br><span class="line">        <span class="keyword">float</span> num5 = <span class="number">10.1F</span> <span class="comment">//float类型数据数字后面需要加F表示</span></span><br><span class="line">        <span class="keyword">double</span> num6 = <span class="number">3.141592653589793238462643</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//字符 </span></span><br><span class="line">        <span class="keyword">char</span> name = <span class="string">&#x27;A&#x27;</span>; <span class="comment">//只允许单个字符（字符是指计算机中使用的字母、数字、字和符号）</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//布尔值：是非,true/false</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="什么是字节"><a href="#什么是字节" class="headerlink" title="什么是字节"></a>什么是字节</h1><p><strong>位（bit）：是计算机内部数据储存的最小单位，11001100是一个八位二进制数</strong><br><strong>字节（byte）：是计算机中数据处理的基本单位，习惯上用大写B来表示</strong><br><strong>1B（byte，字节）=8bit（位）</strong><br><strong>字符：是指计算机中使用的字母、数字、字和符号</strong></p>
-<ul>
-<li>1bit表示1位</li>
-<li>Byte表示一个字节1B=8b</li>
-<li>1024B=1KB</li>
-<li>1024KB=1M</li>
-<li>1024M=1G</li>
-</ul>
+<h3 id="JDK7扩展"><a href="#JDK7扩展" class="headerlink" title="JDK7扩展"></a>JDK7扩展</h3><p>JDK7新特性: 二进制整数<br>由于我们在开发中也经常使用二进制整数，因此JDK7为我们直接提供了二进制整数的类型。<br>我们只要以：0b开头即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0b0101</span>：</span><br></pre></td></tr></table></figure>
+
+<p>在实际开发和学习中，如果遇到特别长的数字，读懂它令人头疼！JDK7为我们提供了下划线分隔符，可<br>以按照自己的习惯进行分割。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> b = <span class="number">1_2234_5678</span>;</span><br></pre></td></tr></table></figure>
+
+<p>我们很容易就知道这是1亿2234万5678啦！ 非常符合国人的习惯！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0b0101</span>;</span><br><span class="line">	<span class="keyword">int</span> b = <span class="number">1_2345_7893</span>;</span><br><span class="line">	System.out.println(a); <span class="comment">//5</span></span><br><span class="line">	System.out.println(b); <span class="comment">//123457893</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
  
       <!-- reward -->
       
@@ -371,7 +372,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2019-2021
+        2019-2022
         <i class="ri-heart-fill heart_icon"></i> 墨歌
       </li>
     </ul>
@@ -394,6 +395,10 @@
     </ul>
     <ul>
       
+        <li>
+          <a href="http://www.beian.miit.gov.cn/" target="_black" rel="nofollow">粤ICP备2022002333</a>
+        </li>
+        
     </ul>
     <ul>
       

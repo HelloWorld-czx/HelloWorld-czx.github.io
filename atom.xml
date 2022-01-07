@@ -6,7 +6,7 @@
   <link href="http://mogeblog.cn/atom.xml" rel="self"/>
   
   <link href="http://mogeblog.cn/"/>
-  <updated>2021-12-24T09:27:59.652Z</updated>
+  <updated>2021-12-27T19:09:12.132Z</updated>
   <id>http://mogeblog.cn/</id>
   
   <author>
@@ -17,20 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaSE-07：基本运算符</title>
+    <link href="http://mogeblog.cn/2021/12/16/JavaSE-07%EF%BC%9A%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://mogeblog.cn/2021/12/16/JavaSE-07%EF%BC%9A%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</id>
+    <published>2021-12-16T03:28:27.000Z</published>
+    <updated>2021-12-27T19:09:12.132Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;运算符&quot;&gt;&lt;a href=&quot;#运算符&quot; class=&quot;headerlink&quot; title=&quot;运算符&quot;&gt;&lt;/a&gt;运算符&lt;/h1&gt;&lt;h4 id=&quot;Java-语言支持如下运算符：&quot;&gt;&lt;a href=&quot;#Java-语言支持如下运算符：&quot; class=&quot;headerlink&quot; title=&quot;Java 语言支持如下运算符：&quot;&gt;&lt;/a&gt;Java 语言支持如下运算符：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;算术运算符：+，一，，/，%，++，-&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;赋值运算符=&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;关系运算符：&amp;gt;，&amp;lt;，&amp;gt;=，&amp;lt;=，==，！=instanceof逻辑运算符：&amp;amp;&amp;amp;，|，！&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;位运算符：&amp;amp;，|，A，~，&amp;gt;，&amp;lt;&amp;lt;，&amp;gt;&amp;gt;&amp;gt;（了解！！！）条件运算符？：&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;扩展赋值运算符：+=，-=，=，/=&lt;/strong&gt;&lt;/em&gt;**&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://pic.imgdb.cn/item/61c5cb2e2ab3f51d9129fa4f.png&quot; style=&quot;zoom:80%;&quot; &gt;
+
+&lt;h4 id=&quot;算术运算符&quot;&gt;&lt;a href=&quot;#算术运算符&quot; class=&quot;headerlink&quot; title=&quot;算术运算符&quot;&gt;&lt;/a&gt;算术运算符&lt;/h4&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; operator;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;demo&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//二元运算&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(a+b);&lt;span class=&quot;comment&quot;&gt;//输出结果:30&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(a-b);&lt;span class=&quot;comment&quot;&gt;//输出结果:-10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(a*b);&lt;span class=&quot;comment&quot;&gt;//输出结果:200&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(a/(&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt;)b);&lt;span class=&quot;comment&quot;&gt;//输出结果:0.5 运算结果存在小数需要强转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaSE-06：变量 常量 作用域</title>
     <link href="http://mogeblog.cn/2021/12/15/JavaSE-06%EF%BC%9A%E5%8F%98%E9%87%8F%20%E5%B8%B8%E9%87%8F%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
     <id>http://mogeblog.cn/2021/12/15/JavaSE-06%EF%BC%9A%E5%8F%98%E9%87%8F%20%E5%B8%B8%E9%87%8F%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
     <published>2021-12-15T04:30:32.000Z</published>
-    <updated>2021-12-24T09:27:59.652Z</updated>
+    <updated>2021-12-30T14:16:32.731Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;变量是什么：就是可以变化的量！&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Java是一种强类型语言，每个变量都必须声明其类型。&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Java变量是程序中最基本的存储单元，其要素包括变量名，变量类型和作用域。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;变量在使用前必须对其声明, 只有在变量声明以后，才能为其分配相应长度的存储单元，声明格式为：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; num1 =&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;；&lt;span class=&quot;comment&quot;&gt;// 变量类型 变量名 = 变量值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; num2 =&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;；&lt;span class=&quot;comment&quot;&gt;// 变量类型 变量名 = 变量值1 , 变量值2,...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//数据类型变量名=值；可以使用逗号隔开来声明多个同类型变量。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;注意事项：&quot;&gt;&lt;a href=&quot;#注意事项：&quot; class=&quot;headerlink&quot; title=&quot;注意事项：&quot;&gt;&lt;/a&gt;注意事项：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;每个变量都有类型，类型可以是基本类型，也可以是引用类型。&lt;/li&gt;
+&lt;li&gt;变量名必须是合法的标识符。&lt;/li&gt;
+&lt;li&gt;变量声明是一条完整的语句，因此每一个声明都必须以分号结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;变量的命名规范&quot;&gt;&lt;a href=&quot;#变量的命名规范&quot; class=&quot;headerlink&quot; title=&quot;变量的命名规范&quot;&gt;&lt;/a&gt;变量的命名规范&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;所有变量、方法、类名：见名知意&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;类成员变量：首字母小写和驼峰原则：monthSalary&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;局部变量：首字母小写和驼峰原则&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;常量：大写字母和下划线：MAXVALUE&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;类名：首字母大写和驼峰原则：Man，GoodMan&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;方法名：首字母小写和驼峰原则：run），runRun0&lt;/p&gt;</summary>
     
     
     
@@ -186,10 +234,10 @@
     <link href="http://mogeblog.cn/2021/12/14/JavaSE-03%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>http://mogeblog.cn/2021/12/14/JavaSE-03%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2021-12-14T01:17:52.000Z</published>
-    <updated>2021-12-19T09:23:52.727Z</updated>
+    <updated>2022-01-07T02:40:54.240Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;标识符&quot;&gt;&lt;a href=&quot;#标识符&quot; class=&quot;headerlink&quot; title=&quot;标识符&quot;&gt;&lt;/a&gt;标识符&lt;/h1&gt;&lt;h1 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h1&gt;&lt;h4 id=&quot;强语言类型&quot;&gt;&lt;a href=&quot;#强语言类型&quot; class=&quot;headerlink&quot; title=&quot;强语言类型&quot;&gt;&lt;/a&gt;强语言类型&lt;/h4&gt;&lt;p&gt;​    要求变量的使用要严格符规定，所有变量都必须先定义后使用&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;标识符&quot;&gt;&lt;a href=&quot;#标识符&quot; class=&quot;headerlink&quot; title=&quot;标识符&quot;&gt;&lt;/a&gt;标识符&lt;/h1&gt;&lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;h4 id=&quot;强语言类型&quot;&gt;&lt;a href=&quot;#强语言类型&quot; class=&quot;headerlink&quot; title=&quot;强语言类型&quot;&gt;&lt;/a&gt;强语言类型&lt;/h4&gt;&lt;p&gt;​    要求变量的使用要严格符规定，所有变量都必须先定义后使用&lt;/p&gt;
 &lt;h4 id=&quot;弱语言类型&quot;&gt;&lt;a href=&quot;#弱语言类型&quot; class=&quot;headerlink&quot; title=&quot;弱语言类型&quot;&gt;&lt;/a&gt;弱语言类型&lt;/h4&gt;&lt;p&gt;​    数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。&lt;/p&gt;
 &lt;h4 id=&quot;Java的数据类型分为两大类&quot;&gt;&lt;a href=&quot;#Java的数据类型分为两大类&quot; class=&quot;headerlink&quot; title=&quot;Java的数据类型分为两大类&quot;&gt;&lt;/a&gt;Java的数据类型分为两大类&lt;/h4&gt;&lt;p&gt;​    &lt;strong&gt;基本类型（primitive type）&lt;/strong&gt;&lt;br&gt;​    &lt;strong&gt;引用类型（reference type）&lt;/strong&gt;&lt;/p&gt;
 &lt;img src=&quot;https://pic.imgdb.cn/item/61be53092ab3f51d9160ef17.jpg&quot; style=&quot;zoom: 80%;&quot; &gt;
@@ -311,7 +359,7 @@
     <link href="http://mogeblog.cn/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/"/>
     <id>http://mogeblog.cn/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/</id>
     <published>2021-12-13T01:38:22.000Z</published>
-    <updated>2021-12-18T20:45:26.545Z</updated>
+    <updated>2021-12-24T20:05:57.052Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;注释&quot;&gt;&lt;a href=&quot;#注释&quot; class=&quot;headerlink&quot; title=&quot;注释&quot;&gt;&lt;/a&gt;注释&lt;/h1&gt;&lt;h3 id=&quot;什么是注释&quot;&gt;&lt;a href=&quot;#什么是注释&quot; class=&quot;headerlink&quot; title=&quot;什么是注释&quot;&gt;&lt;/a&gt;什么是注释&lt;/h3&gt;&lt;p&gt;注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。&lt;/p&gt;
@@ -344,6 +392,37 @@
     <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
     
     <category term="基础语法" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二进制是什么</title>
+    <link href="http://mogeblog.cn/2021/12/12/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
+    <id>http://mogeblog.cn/2021/12/12/%E4%BA%8C%E8%BF%9B%E5%88%B6/</id>
+    <published>2021-12-12T04:19:24.000Z</published>
+    <updated>2022-01-07T02:41:24.099Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么是字节&quot;&gt;&lt;a href=&quot;#什么是字节&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java学习" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="JavaSE" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/"/>
+    
+    <category term="Java是什么" scheme="http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/Java%E6%98%AF%E4%BB%80%E4%B9%88/"/>
     
     
     <category term="Java" scheme="http://mogeblog.cn/tags/Java/"/>

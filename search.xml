@@ -1,23 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaSE-06：变量 常量 作用域</title>
-    <url>/2021/12/15/JavaSE-06%EF%BC%9A%E5%8F%98%E9%87%8F%20%E5%B8%B8%E9%87%8F%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
-    <content><![CDATA[<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p><strong>变量是什么：就是可以变化的量！</strong><br><strong>Java是一种强类型语言，每个变量都必须声明其类型。</strong><br><strong>Java变量是程序中最基本的存储单元，其要素包括变量名，变量类型和作用域。</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> num1 =<span class="number">1</span>；<span class="comment">// 变量类型 变量名 = 变量值</span></span><br><span class="line"><span class="keyword">int</span> num2 =<span class="number">1</span>,<span class="number">2</span>；<span class="comment">// 变量类型 变量名 = 变量值1 , 变量值2,...</span></span><br><span class="line"><span class="comment">//数据类型变量名=值；可以使用逗号隔开来声明多个同类型变量。</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h4><ul>
-<li>每个变量都有类型，类型可以是基本类型，也可以是引用类型。</li>
-<li>变量名必须是合法的标识符。</li>
-<li>变量声明是一条完整的语句，因此每一个声明都必须以分号结束</li>
+    <title>JavaSE-01：注释</title>
+    <url>/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/</url>
+    <content><![CDATA[<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><h3 id="什么是注释"><a href="#什么是注释" class="headerlink" title="什么是注释"></a>什么是注释</h3><p>注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。</p>
+<h3 id="注释的作用"><a href="#注释的作用" class="headerlink" title="注释的作用"></a>注释的作用</h3><ul>
+<li><p><strong>有助于他人阅读代码快速理解</strong></p>
+</li>
+<li><p><strong>有助于提高开发效率</strong></p>
+</li>
+<li><p><strong>有助于保持代码一致性</strong></p>
+</li>
+<li><p><strong>帮助修补程序或快速修复</strong></p>
+</li>
+<li><p><strong>有助于加快开发过程</strong></p>
+</li>
+<li><p><strong>有助于提高协作效率</strong></p>
+</li>
 </ul>
-<h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><ul>
-<li>类变量（静态变量）</li>
-<li>实例变量</li>
-<li>局部变量</li>
+<h3 id="Java注释有三种"><a href="#Java注释有三种" class="headerlink" title="Java注释有三种"></a>Java注释有三种</h3><ul>
+<li><p><strong>单行注释</strong></p>
+</li>
+<li><p><strong>多行注释</strong></p>
+</li>
+<li><p><strong>文档注释</strong></p>
+<hr>
+<span id="more"></span>
+
+<p><strong>单行注释</strong></p>
+<p>以双斜杠“//”标识，只能注释一行内容，用在注释信息内容少的地方。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//单行注释</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>多行注释</strong></p>
+<p>包含在“/<em>”和“</em>/”之间，能注释很多行的内容。为了可读性比较好，一般首行和尾行不写注释信息</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">/*多行注释</span></span><br><span class="line"><span class="comment">        多行注释</span></span><br><span class="line"><span class="comment">        多行注释*/</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;   </span><br></pre></td></tr></table></figure>
+
+<p><strong>文档注释</strong></p>
+<p>包含在“/*<em>”和“</em>/”之间，也能注释多行内容，一般用在类、方法和变量上面，用来描述其作用。注释后，鼠标放在类和变量上面会自动显示出我们注释的内容</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    <span class="doctag">@author</span> 作者名</span></span><br><span class="line"><span class="comment">    <span class="doctag">@version</span> 版本</span></span><br><span class="line"><span class="comment">    ...</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+<p>文档注释可以通过 Javadoc 命令把文档注释中的内容生成文档，并输出到 HTML 文件中，方便记录程序信息。还可以包含一个或多个 @ 标签，每个 @ 标签都在新的一行开始。关于 Javadoc 的具体标签和使用可阅读学习《<a href="http://c.biancheng.net/view/6262.html">Javadoc入门教程</a>》一节。</p>
+</li>
 </ul>
+]]></content>
+      <categories>
+        <category>Java学习</category>
+        <category>JavaSE</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaSE-02：标识符　关键字</title>
+    <url>/2021/12/13/JavaSE-02%EF%BC%9A%E6%A0%87%E8%AF%86%E7%AC%A6%20%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><img src="https://pic.imgdb.cn/item/61bda58a2ab3f51d910d6c49.png" style="zoom: 67%;" >
+
+
+
+<h4 id="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"><a href="#java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。" class="headerlink" title="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"></a>java所有的组成部分都需要名字。<code>类名、变量名以及方法名</code>都被称为标识符。</h4><span id="more"></span>
+
+<h3 id="标识符注意点"><a href="#标识符注意点" class="headerlink" title="标识符注意点"></a>标识符注意点</h3><ul>
+<li><strong>所有的标识符都应该以字母（A-Z或者a-z），美元符（$）、或者下划线（）开始</strong></li>
+<li><strong>首字符不能为数字</strong></li>
+<li><strong>首字符之后可以是字母（A-Z或者a-z），美元符（$）、下划线（）或数字的任何字符组合</strong></li>
+<li><strong>不能使用关键字作为变量名或方法名</strong></li>
+<li><strong>不能包含空格</strong></li>
+<li><strong>标识符是大小写敏感的</strong></li>
+<li><strong>合法标识符举例：age、$salary、_value、_1 value</strong></li>
+<li><strong>非法标识符举例：123abc、-salary、#abc public static void main（String[]args）{</strong></li>
+<li><strong>可以使用中文命名，不建议使用，也不建议使用拼音，字符集警告</strong>！！！</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 标识符正确格式，一般用英文字母单词就够用</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Ahello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String $hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String _hllo=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String 你好=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符错误格式，会提示报错</span></span><br><span class="line">        String 123hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String #hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String *hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符大小写敏感，同名但字母存在大小写差异，所以实质上还是不同的属性并储存在不同的位置</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String HELLO=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java学习</category>
+        <category>JavaSE</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaSE-03：数据类型</title>
+    <url>/2021/12/14/JavaSE-03%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h4 id="强语言类型"><a href="#强语言类型" class="headerlink" title="强语言类型"></a>强语言类型</h4><p>​    要求变量的使用要严格符规定，所有变量都必须先定义后使用</p>
+<h4 id="弱语言类型"><a href="#弱语言类型" class="headerlink" title="弱语言类型"></a>弱语言类型</h4><p>​    数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。</p>
+<h4 id="Java的数据类型分为两大类"><a href="#Java的数据类型分为两大类" class="headerlink" title="Java的数据类型分为两大类"></a>Java的数据类型分为两大类</h4><p>​    <strong>基本类型（primitive type）</strong><br>​    <strong>引用类型（reference type）</strong></p>
+<img src="https://pic.imgdb.cn/item/61be53092ab3f51d9160ef17.jpg" style="zoom: 80%;" >
+
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>描述</th>
+<th>占用字节</th>
+<th>取值范围</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>整型，用于存储整数</td>
+<td>4个字节</td>
+<td>-2147483648~2147483647</td>
+<td>0</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Java中最小的数据类型</td>
+<td>1个字节</td>
+<td>-128~127</td>
+<td>0</td>
+</tr>
+<tr>
+<td>short</td>
+<td>短整型</td>
+<td>2个字节</td>
+<td>-32768~32717</td>
+<td>0</td>
+</tr>
+<tr>
+<td>long</td>
+<td>长整型</td>
+<td>8个字节</td>
+<td>-2^63~2^63-1</td>
+<td>0L</td>
+</tr>
+<tr>
+<td>float</td>
+<td>浮点型，用于存储带小数点的数字</td>
+<td>4个字节</td>
+<td>/</td>
+<td>0.0f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点型，用于存储带有小数点的数字</td>
+<td>8个字节</td>
+<td>/</td>
+<td>0.0d</td>
+</tr>
+<tr>
+<td>char</td>
+<td>字符型，用于存储单个字符</td>
+<td>2个字节</td>
+<td>0~65535</td>
+<td>空</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔类型，用于判断真或假</td>
+<td>1个字节</td>
+<td>仅有两个值，即true、false</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<p>在Java中，引用类型的变量非常类似于C/C++的指针。引用类型指向一个对象，指向对象的变量是引用变量。这些变量在声明时被指定为一个特定的类型，比如 Employee、Puppy 等。变量一旦声明后，类型就不能被改变了。</p>
+<p>Java中的引用类型共有三种，分别是类，数组，接口这些引用类型的默认值都是null</p>
+<p><strong>基本类型与引用类型区别：</strong></p>
+<p>基本数据类型和引用类型的区别主要在于基本数据类型是分配在栈上的，而引用类型是分配在堆上的</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(Stirng[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//八大基本数据类型</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//整数</span></span><br><span class="line">        <span class="keyword">byte</span> num1 = <span class="number">127</span>;</span><br><span class="line">        <span class="keyword">short</span> num2 = <span class="number">32717</span>;</span><br><span class="line">        <span class="keyword">int</span> num3 = <span class="number">23647</span>;</span><br><span class="line">        <span class="keyword">long</span> num4 = <span class="number">124L</span>; <span class="comment">//long类型数据数字后面需要加L表示</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮点数（小数）</span></span><br><span class="line">        <span class="keyword">float</span> num5 = <span class="number">10.1F</span> <span class="comment">//float类型数据数字后面需要加F表示</span></span><br><span class="line">        <span class="keyword">double</span> num6 = <span class="number">3.141592653589793238462643</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//字符 </span></span><br><span class="line">        <span class="keyword">char</span> name = <span class="string">&#x27;A&#x27;</span>; <span class="comment">//只允许单个字符（字符是指计算机中使用的字母、数字、字和符号）</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//布尔值：是非,true/false</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JDK7扩展"><a href="#JDK7扩展" class="headerlink" title="JDK7扩展"></a>JDK7扩展</h3><p>JDK7新特性: 二进制整数<br>由于我们在开发中也经常使用二进制整数，因此JDK7为我们直接提供了二进制整数的类型。<br>我们只要以：0b开头即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0b0101</span>：</span><br></pre></td></tr></table></figure>
+
+<p>在实际开发和学习中，如果遇到特别长的数字，读懂它令人头疼！JDK7为我们提供了下划线分隔符，可<br>以按照自己的习惯进行分割。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> b = <span class="number">1_2234_5678</span>;</span><br></pre></td></tr></table></figure>
+
+<p>我们很容易就知道这是1亿2234万5678啦！ 非常符合国人的习惯！</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0b0101</span>;</span><br><span class="line">	<span class="keyword">int</span> b = <span class="number">1_2345_7893</span>;</span><br><span class="line">	System.out.println(a); <span class="comment">//5</span></span><br><span class="line">	System.out.println(b); <span class="comment">//123457893</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Java学习</category>
@@ -171,96 +335,148 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaSE-03：数据类型</title>
-    <url>/2021/12/14/JavaSE-03%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h4 id="强语言类型"><a href="#强语言类型" class="headerlink" title="强语言类型"></a>强语言类型</h4><p>​    要求变量的使用要严格符规定，所有变量都必须先定义后使用</p>
-<h4 id="弱语言类型"><a href="#弱语言类型" class="headerlink" title="弱语言类型"></a>弱语言类型</h4><p>​    数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。</p>
-<h4 id="Java的数据类型分为两大类"><a href="#Java的数据类型分为两大类" class="headerlink" title="Java的数据类型分为两大类"></a>Java的数据类型分为两大类</h4><p>​    <strong>基本类型（primitive type）</strong><br>​    <strong>引用类型（reference type）</strong></p>
-<img src="https://pic.imgdb.cn/item/61be53092ab3f51d9160ef17.jpg" style="zoom: 80%;" >
+    <title>JavaSE-06：变量 常量 作用域</title>
+    <url>/2021/12/15/JavaSE-06%EF%BC%9A%E5%8F%98%E9%87%8F%20%E5%B8%B8%E9%87%8F%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p><strong>变量是什么：就是可以变化的量！</strong><br><strong>Java是一种强类型语言，每个变量都必须声明其类型。</strong><br><strong>Java变量是程序中最基本的存储单元，其要素包括变量名，变量类型和作用域。</strong></p>
+<p><strong>变量在使用前必须对其声明, 只有在变量声明以后，才能为其分配相应长度的存储单元，声明格式为：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> num1 =<span class="number">1</span>；<span class="comment">// 变量类型 变量名 = 变量值</span></span><br><span class="line"><span class="keyword">int</span> num2 =<span class="number">1</span>,<span class="number">2</span>；<span class="comment">// 变量类型 变量名 = 变量值1 , 变量值2,...</span></span><br><span class="line"><span class="comment">//数据类型变量名=值；可以使用逗号隔开来声明多个同类型变量。</span></span><br></pre></td></tr></table></figure>
 
-<table>
+<h4 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h4><ul>
+<li>每个变量都有类型，类型可以是基本类型，也可以是引用类型。</li>
+<li>变量名必须是合法的标识符。</li>
+<li>变量声明是一条完整的语句，因此每一个声明都必须以分号结束</li>
+</ul>
+<h3 id="变量的命名规范"><a href="#变量的命名规范" class="headerlink" title="变量的命名规范"></a>变量的命名规范</h3><ul>
+<li><p>所有变量、方法、类名：见名知意</p>
+</li>
+<li><p>类成员变量：首字母小写和驼峰原则：monthSalary</p>
+</li>
+<li><p>局部变量：首字母小写和驼峰原则</p>
+</li>
+<li><p>常量：大写字母和下划线：MAXVALUE</p>
+</li>
+<li><p>类名：首字母大写和驼峰原则：Man，GoodMan</p>
+</li>
+<li><p>方法名：首字母小写和驼峰原则：run），runRun0</p>
+<span id="more"></span></li>
+</ul>
+<p><strong>【演示】</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a, b, c; <span class="comment">// 声明三个int型整数：a、 b、c</span></span><br><span class="line"><span class="keyword">int</span> d = <span class="number">3</span>, e = <span class="number">4</span>, f = <span class="number">5</span>; <span class="comment">// 声明三个整数并赋予初值</span></span><br><span class="line"><span class="keyword">byte</span> z = <span class="number">22</span>; <span class="comment">// 声明并初始化 z</span></span><br><span class="line">String s = <span class="string">&quot;runoob&quot;</span>; <span class="comment">// 声明并初始化字符串 s</span></span><br><span class="line"><span class="keyword">double</span> pi = <span class="number">3.14159</span>; <span class="comment">// 声明了双精度浮点型变量 pi</span></span><br><span class="line"><span class="keyword">char</span> x = <span class="string">&#x27;x&#x27;</span>; <span class="comment">// 声明变量 x 的值是字符 &#x27;x&#x27;。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【编码规范】</strong><br>虽然可以在一行声明多个变量，但是不提倡这个风格，逐一声明每一个变量可以提高程序可读性。</p>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>在计算机程序中，声明在不同地方的变量具有不同的作用域，例如局部变量、全局变量等。在Java语言中，<code>作用域</code>是由<strong>花括号的位置</strong>决定的，它决定了其定义的变量名的<strong>可见性</strong>与<strong>生命周期</strong>。</p>
+<h4 id="在Java语言中，变量的类型主要有3种"><a href="#在Java语言中，变量的类型主要有3种" class="headerlink" title="在Java语言中，变量的类型主要有3种"></a>在Java语言中，变量的类型主要有3种</h4><ul>
+<li><p><strong>成员变量(实例变量：member variable)</strong></p>
+<p>​    类的<code>成员变量</code>的作用范围与类的实例化对象的作用范围相同，当类被实例化时，成员变量就会在内存中分配空间并初始化，直到这个被实例化对象的生命周期结束时，成员变量的生命周期才结束。</p>
+</li>
+<li><p><strong>类变量（静态变量： static variable)</strong></p>
+<p>​    被static修饰的成员变量称为<code>静态变量</code>或<code>全局变量</code>，与成员变量不同的是，静态变量不依赖于特定的实例，而是被所有实例所共享，也就是说，只要一个类被加载，JVM就会给类的静态变量分配存储空间。因此，就可以通过类名和变量名来访问静态变量。</p>
+</li>
+<li><p><strong>局部变量</strong></p>
+<p>​    <code>局部变量</code>的作用域与可见性为它所在的花括号内。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> allClicks=<span class="number">0</span>; <span class="comment">// 类变量</span></span><br><span class="line">    String str=<span class="string">&quot;hello world&quot;</span>; <span class="comment">// 实例变量</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i =<span class="number">0</span>; <span class="comment">// 局部变量</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>方法或语句块内部定义的变量。生命周期是从声明位置开始到”}”为止。<br>在使用前必须先声明和初始化(赋初值)。<br>局部变量没有默认值，所以局部变量被声明后，必须经过初始化，才可以使用。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> j = i+<span class="number">5</span> ; <span class="comment">// 编译出错，变量i还未被初始化</span></span><br><span class="line">    System.out.println(j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> j = i+<span class="number">5</span> ;</span><br><span class="line">    System.out.println(j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例变量"><a href="#实例变量" class="headerlink" title="实例变量"></a>实例变量</h3><p>方法外部、类的内部定义的变量。<br>从属于对象，生命周期伴随对象始终。<br>如果不自行初始化，他会自动初始化成该类型的默认初始值<br>（数值型变量初始化成0或0.0，字符型变量的初始化值是16位的0，布尔型默认是false）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 这个实例变量对子类可见</span></span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="comment">// 私有变量，仅在该类可见</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h3><p>使用static定义。<br>从属于类，生命周期伴随类始终，从类加载到卸载。<br>(注：讲完内存分析后我们再深入！先放一放这个概念！)<br>如果不自行初始化，他会自动初始化成该类型的默认初始值<br>（数值型变量初始化成0或0.0，字符型变量的初始化值是16位的0，布尔型默认是false）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="comment">//salary是静态的私有变量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">double</span> salary;</span><br><span class="line">    <span class="comment">// DEPARTMENT是一个常量</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DEPARTMENT = <span class="string">&quot;开发人员&quot;</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    salary = <span class="number">10000</span>;</span><br><span class="line">    System.out.println(DEPARTMENT+<span class="string">&quot;平均工资:&quot;</span>+salary);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="成员变量的4种作用域对比："><a href="#成员变量的4种作用域对比：" class="headerlink" title="成员变量的4种作用域对比："></a>成员变量的4种作用域对比：</h4><table>
 <thead>
 <tr>
-<th>数据类型</th>
-<th>描述</th>
-<th>占用字节</th>
-<th>取值范围</th>
-<th>默认值</th>
+<th>作用域与可见性</th>
+<th>当前类</th>
+<th>同一package</th>
+<th>（同包和不同包）子类</th>
+<th>其他package</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>int</td>
-<td>整型，用于存储整数</td>
-<td>4个字节</td>
-<td>-2147483648~2147483647</td>
-<td>0</td>
+<td>public</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
 </tr>
 <tr>
-<td>byte</td>
-<td>Java中最小的数据类型</td>
-<td>1个字节</td>
-<td>-128~127</td>
-<td>0</td>
+<td>protected</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
 </tr>
 <tr>
-<td>short</td>
-<td>短整型</td>
-<td>2个字节</td>
-<td>-32768~32717</td>
-<td>0</td>
+<td>缺省</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
 </tr>
 <tr>
-<td>long</td>
-<td>长整型</td>
-<td>8个字节</td>
-<td>-2^63~2^63-1</td>
-<td>0L</td>
-</tr>
-<tr>
-<td>float</td>
-<td>浮点型，用于存储带小数点的数字</td>
-<td>4个字节</td>
-<td>/</td>
-<td>0.0f</td>
-</tr>
-<tr>
-<td>double</td>
-<td>双精度浮点型，用于存储带有小数点的数字</td>
-<td>8个字节</td>
-<td>/</td>
-<td>0.0d</td>
-</tr>
-<tr>
-<td>char</td>
-<td>字符型，用于存储单个字符</td>
-<td>2个字节</td>
-<td>0~65535</td>
-<td>空</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>布尔类型，用于判断真或假</td>
-<td>1个字节</td>
-<td>仅有两个值，即true、false</td>
-<td>false</td>
+<td>private</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
 </tr>
 </tbody></table>
-<span id="more"></span>
-
-<p>在Java中，引用类型的变量非常类似于C/C++的指针。引用类型指向一个对象，指向对象的变量是引用变量。这些变量在声明时被指定为一个特定的类型，比如 Employee、Puppy 等。变量一旦声明后，类型就不能被改变了。</p>
-<p>Java中的引用类型共有三种，分别是类，数组，接口这些引用类型的默认值都是null</p>
-<p><strong>基本类型与引用类型区别：</strong></p>
-<p>基本数据类型和引用类型的区别主要在于基本数据类型是分配在栈上的，而引用类型是分配在堆上的</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(Stirng[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//八大基本数据类型</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//整数</span></span><br><span class="line">        <span class="keyword">byte</span> num1 = <span class="number">127</span>;</span><br><span class="line">        <span class="keyword">short</span> num2 = <span class="number">32717</span>;</span><br><span class="line">        <span class="keyword">int</span> num3 = <span class="number">23647</span>;</span><br><span class="line">        <span class="keyword">long</span> num4 = <span class="number">124L</span>; <span class="comment">//long类型数据数字后面需要加L表示</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮点数（小数）</span></span><br><span class="line">        <span class="keyword">float</span> num5 = <span class="number">10.1F</span> <span class="comment">//float类型数据数字后面需要加F表示</span></span><br><span class="line">        <span class="keyword">double</span> num6 = <span class="number">3.141592653589793238462643</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//字符 </span></span><br><span class="line">        <span class="keyword">char</span> name = <span class="string">&#x27;A&#x27;</span>; <span class="comment">//只允许单个字符（字符是指计算机中使用的字母、数字、字和符号）</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//布尔值：是非,true/false</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="什么是字节"><a href="#什么是字节" class="headerlink" title="什么是字节"></a>什么是字节</h1><p><strong>位（bit）：是计算机内部数据储存的最小单位，11001100是一个八位二进制数</strong><br><strong>字节（byte）：是计算机中数据处理的基本单位，习惯上用大写B来表示</strong><br><strong>1B（byte，字节）=8bit（位）</strong><br><strong>字符：是指计算机中使用的字母、数字、字和符号</strong></p>
-<ul>
-<li>1bit表示1位</li>
-<li>Byte表示一个字节1B=8b</li>
-<li>1024B=1KB</li>
-<li>1024KB=1M</li>
-<li>1024M=1G</li>
+<p>public，表明该成员变量或方法对所有类或对象都是可见的，所有类或对象都可以直接访问。<br>private，表明该成员变量或方法是私有的，只有当前类对其具有访问权限，除此之外的其他类或者对象都没有访问权限。<br>default（缺省）。表明该成员变量或方法只有自己和与其同一包内的类可见。<br>protected与default(缺省)最难区分，protected只是多了其他包的子类也具有访问权限而已</p>
+<h3 id="成员变量和局部变量的区别"><a href="#成员变量和局部变量的区别" class="headerlink" title="成员变量和局部变量的区别"></a>成员变量和局部变量的区别</h3><p><strong>成员变量和局部变量的区别：</strong><br>成员变量：</p>
+<ol>
+<li><p>成员变量定义在类中，在整个类中都可以被访问。</p>
+</li>
+<li><p>成员变量随着对象的建立而建立，随着对象的消失而消失，存在于对象所在的堆内存中。</p>
+</li>
+<li><p>成员变量有默认初始化值。</p>
+</li>
+</ol>
+<p>局部变量：</p>
+<ol>
+<li>局部变量只定义在局部范围内，如：函数内，语句内等，只在所属的区域有效。</li>
+<li>局部变量存在于栈内存中，作用的范围结束，变量空间会自动释放。</li>
+<li>局部变量没有默认初a始化值 </li>
+</ol>
+<p>在使用变量时需要遵循的原则为：就近原则</p>
+<p> 首先在局部范围找，有就使用；接着在成员位置找。</p>
+<p><strong>成员变量和类变量的区别：</strong></p>
+<p>   1、两个变量的生命周期不同</p>
+<p>  成员变量随着对象的创建而存在，随着对象的回收而释放。</p>
+<p>  静态变量随着类的加载而存在，随着类的消失而消失。</p>
+<p>   2、调用方式不同</p>
+<p>  成员变量只能被对象调用。</p>
+<p>  静态变量可以被对象调用，还可以被类名调用。</p>
+<p>   3、别名不同</p>
+<p>  成员变量也称为实例变量。</p>
+<p>  静态变量也称为类变量。</p>
+<p>   4、数据存储位置不同</p>
+<p>  成员变量存储在堆内存的对象中，所以也叫对象的特有数据。</p>
+<p>  静态变量数据存储在方法区（共享数据区）的静态区，所以也叫对象的共享数据。</p>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>  1、成员变量所属于对象。所以也称为实例变量。</p>
+<p>  静态变量所属于类。所以也称为类变量。</p>
+<p>   2、成员变量存在于堆内存中。</p>
+<p>  静态变量存在于方法区中。</p>
+<p>   3、成员变量随着对象创建而存在。随着对象被回收而消失。</p>
+<p>  静态变量随着类的加载而存在。随着类的消失而消失。</p>
+<p>   4、成员变量只能被对象所调用 。</p>
+<p>  静态变量可以被对象调用，也可以被类名调用。</p>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><ul>
+<li><p><strong>常量（Constant）：初始化（initialize）后不能再改变值！不会变动的值。</strong></p>
+</li>
+<li><p><strong>所谓常量可以理解成一种特殊的变量，它的值被设定后，在程序运行过程中不允许被改变。</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;<span class="comment">// final 类型 常量名（全大写） = 值;	</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>常量名一般使用大写字符。</strong></p>
+</li>
 </ul>
+<p>程序中使用常量可以提高代码的可维护性。例如，在项目开发时，我们需要指定用户的性别，此时可以<br>定义一个常量 SEX，赋值为 “男”，在需要指定用户性别的地方直接调用此常量即可，避免了由于用户的<br>不规范赋值导致程序出错的情况。</p>
 ]]></content>
       <categories>
         <category>Java学习</category>
@@ -273,85 +489,23 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaSE-02：标识符　关键字</title>
-    <url>/2021/12/13/JavaSE-02%EF%BC%9A%E6%A0%87%E8%AF%86%E7%AC%A6%20%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[<h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><img src="https://pic.imgdb.cn/item/61bda58a2ab3f51d910d6c49.png" style="zoom: 67%;" >
-
-
-
-<h4 id="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"><a href="#java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。" class="headerlink" title="java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。"></a>java所有的组成部分都需要名字。<code>类名、变量名以及方法名</code>都被称为标识符。</h4><span id="more"></span>
-
-<h3 id="标识符注意点"><a href="#标识符注意点" class="headerlink" title="标识符注意点"></a>标识符注意点</h3><ul>
-<li><strong>所有的标识符都应该以字母（A-Z或者a-z），美元符（$）、或者下划线（）开始</strong></li>
-<li><strong>首字符不能为数字</strong></li>
-<li><strong>首字符之后可以是字母（A-Z或者a-z），美元符（$）、下划线（）或数字的任何字符组合</strong></li>
-<li><strong>不能使用关键字作为变量名或方法名</strong></li>
-<li><strong>不能包含空格</strong></li>
-<li><strong>标识符是大小写敏感的</strong></li>
-<li><strong>合法标识符举例：age、$salary、_value、_1 value</strong></li>
-<li><strong>非法标识符举例：123abc、-salary、#abc public static void main（String[]args）{</strong></li>
-<li><strong>可以使用中文命名，不建议使用，也不建议使用拼音，字符集警告</strong>！！！</li>
+    <title>JavaSE-07：基本运算符</title>
+    <url>/2021/12/16/JavaSE-07%EF%BC%9A%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h4 id="Java-语言支持如下运算符："><a href="#Java-语言支持如下运算符：" class="headerlink" title="Java 语言支持如下运算符："></a>Java 语言支持如下运算符：</h4><ul>
+<li><em><strong>算术运算符：+，一，，/，%，++，-</strong></em></li>
+<li><em><strong>赋值运算符=</strong></em></li>
+<li><em><strong>关系运算符：&gt;，&lt;，&gt;=，&lt;=，==，！=instanceof逻辑运算符：&amp;&amp;，|，！</strong></em></li>
+<li><em><strong>位运算符：&amp;，|，A，~，&gt;，&lt;&lt;，&gt;&gt;&gt;（了解！！！）条件运算符？：</strong></em></li>
+<li><em><strong>扩展赋值运算符：+=，-=，=，/=</strong></em>**</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 标识符正确格式，一般用英文字母单词就够用</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Ahello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String $hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String _hllo=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String 你好=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符错误格式，会提示报错</span></span><br><span class="line">        String 123hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String #hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String *hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        <span class="comment">// 标识符大小写敏感，同名但字母存在大小写差异，所以实质上还是不同的属性并储存在不同的位置</span></span><br><span class="line">        String hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String Hello=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">        String HELLO=<span class="string">&quot;demo&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="https://pic.imgdb.cn/item/61c5cb2e2ab3f51d9129fa4f.png" style="zoom:80%;" >
 
-]]></content>
-      <categories>
-        <category>Java学习</category>
-        <category>JavaSE</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>JavaSE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaSE-01：注释</title>
-    <url>/2021/12/13/JavaSE-01%EF%BC%9A%E6%B3%A8%E9%87%8A/</url>
-    <content><![CDATA[<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><h3 id="什么是注释"><a href="#什么是注释" class="headerlink" title="什么是注释"></a>什么是注释</h3><p>注释标签是使用来在源代码中添加说明/注释，使用该标签注释的内容并不会被执行。</p>
-<h3 id="注释的作用"><a href="#注释的作用" class="headerlink" title="注释的作用"></a>注释的作用</h3><ul>
-<li><p><strong>有助于他人阅读代码快速理解</strong></p>
-</li>
-<li><p><strong>有助于提高开发效率</strong></p>
-</li>
-<li><p><strong>有助于保持代码一致性</strong></p>
-</li>
-<li><p><strong>帮助修补程序或快速修复</strong></p>
-</li>
-<li><p><strong>有助于加快开发过程</strong></p>
-</li>
-<li><p><strong>有助于提高协作效率</strong></p>
-</li>
-</ul>
-<h3 id="Java注释有三种"><a href="#Java注释有三种" class="headerlink" title="Java注释有三种"></a>Java注释有三种</h3><ul>
-<li><p><strong>单行注释</strong></p>
-</li>
-<li><p><strong>多行注释</strong></p>
-</li>
-<li><p><strong>文档注释</strong></p>
-<hr>
+<h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> operator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//二元运算</span></span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">        System.out.println(a+b);<span class="comment">//输出结果:30</span></span><br><span class="line">        System.out.println(a-b);<span class="comment">//输出结果:-10</span></span><br><span class="line">        System.out.println(a*b);<span class="comment">//输出结果:200</span></span><br><span class="line">        System.out.println(a/(<span class="keyword">double</span>)b);<span class="comment">//输出结果:0.5 运算结果存在小数需要强转</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <span id="more"></span>
 
-<p><strong>单行注释</strong></p>
-<p>以双斜杠“//”标识，只能注释一行内容，用在注释信息内容少的地方。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//单行注释</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>多行注释</strong></p>
-<p>包含在“/<em>”和“</em>/”之间，能注释很多行的内容。为了可读性比较好，一般首行和尾行不写注释信息</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">/*多行注释</span></span><br><span class="line"><span class="comment">        多行注释</span></span><br><span class="line"><span class="comment">        多行注释*/</span></span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;   </span><br></pre></td></tr></table></figure>
-
-<p><strong>文档注释</strong></p>
-<p>包含在“/*<em>”和“</em>/”之间，也能注释多行内容，一般用在类、方法和变量上面，用来描述其作用。注释后，鼠标放在类和变量上面会自动显示出我们注释的内容</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    <span class="doctag">@author</span> 作者名</span></span><br><span class="line"><span class="comment">    <span class="doctag">@version</span> 版本</span></span><br><span class="line"><span class="comment">    ...</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//输出一个HeLlo，World！</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello，Wrold！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-
-<p>文档注释可以通过 Javadoc 命令把文档注释中的内容生成文档，并输出到 HTML 文件中，方便记录程序信息。还可以包含一个或多个 @ 标签，每个 @ 标签都在新的一行开始。关于 Javadoc 的具体标签和使用可阅读学习《<a href="http://c.biancheng.net/view/6262.html">Javadoc入门教程</a>》一节。</p>
-</li>
-</ul>
-]]></content>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><h4 id="三目运算浮"><a href="#三目运算浮" class="headerlink" title="三目运算浮"></a>三目运算浮</h4><h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><p>就是将等号右边的值赋给等号左边的值。</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
       <categories>
         <category>Java学习</category>
         <category>JavaSE</category>
@@ -460,5 +614,27 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>二进制是什么</title>
+    <url>/2021/12/12/%E4%BA%8C%E8%BF%9B%E5%88%B6/</url>
+    <content><![CDATA[<h3 id="什么是字节"><a href="#什么是字节" class="headerlink" title="什么是字节"></a>什么是字节</h3><p><strong>位（bit）：是计算机内部数据储存的最小单位，11001100是一个八位二进制数</strong><br><strong>字节（byte）：是计算机中数据处理的基本单位，习惯上用大写B来表示</strong><br><strong>1B（byte，字节）=8bit（位）</strong><br><strong>字符：是指计算机中使用的字母、数字、字和符号</strong></p>
+<ul>
+<li>1bit表示1位</li>
+<li>Byte表示一个字节1B=8b</li>
+<li>1024B=1KB</li>
+<li>1024KB=1M</li>
+<li>1024M=1G</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java学习</category>
+        <category>JavaSE</category>
+        <category>Java是什么</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
   </entry>
 </search>
