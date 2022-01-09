@@ -4,7 +4,7 @@
   <url>
     <loc>http://mogeblog.cn/2021/12/12/%E4%BA%8C%E8%BF%9B%E5%88%B6/</loc>
     
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,7 +121,7 @@
 
   <url>
     <loc>http://mogeblog.cn/</loc>
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -129,14 +129,14 @@
   
   <url>
     <loc>http://mogeblog.cn/tags/Java/</loc>
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://mogeblog.cn/tags/JavaSE/</loc>
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -145,28 +145,28 @@
   
   <url>
     <loc>http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/</loc>
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://mogeblog.cn/categories/Java%E5%AD%A6%E4%B9%A0/JavaSE/Java%E6%98%AF%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2022-01-07</lastmod>
+    <lastmod>2022-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
